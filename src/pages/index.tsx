@@ -1,9 +1,5 @@
-import Image from "next/image";
-import { NextPage } from "next";
-import RootLayout from "./layout";
+import type { NextPage } from "next";
 import Experience from "@components/experience/Experience";
-import styles from "./page.module.css";
-
 const Home: NextPage = () => {
   return (
     <>
