@@ -1,5 +1,3 @@
-import "./globals.css";
-
 export default function RootLayout({
   children,
 }: {
@@ -7,9 +5,9 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <nav>nav</nav>
+      <nav>Tone.js Experience</nav>
       <main>{children}</main>
-      <footer>footer</footer>
+      {/* <footer>footer</footer> */}
     </>
   );
 }
