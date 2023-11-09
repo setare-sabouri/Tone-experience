@@ -1,9 +1,14 @@
 .experienceContainer{
-
     background-color: rgba(218, 194, 173, 0.391);
     height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &__noteButtonContainer{
+   display: flex;
+   flex-wrap: wrap;
+
+    }
     
 }

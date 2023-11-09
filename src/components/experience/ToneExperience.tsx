@@ -28,7 +28,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
 
   return (
     <div className={styles.experienceContainer}>
-      <div>
+      <div className={styles.experienceContainer__noteButtonContainer}>
         {pianoNotes.map((note) => (
           <NoteButton key={note} note={note} onClick={() => playNote(note)} />
         ))}
