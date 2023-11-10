@@ -6,8 +6,11 @@
     align-items: center;
 
     &__noteButtonContainer{
-   display: flex;
-   flex-wrap: wrap;
+        width: 50% ;
+        height: 50%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 0;
 
     }
     

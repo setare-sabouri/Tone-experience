@@ -24,39 +24,28 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   };
 
   // Notes for a simple piano
-  const pianoNotes = [
-    "C4",
-    "D4",
-    "E4",
-    "F4",
-    "G4",
-    "A4",
-    "B4",
-    "C5",
-    "D5",
-    "E5",
-    "F5",
-    "G5",
-    "A5",
-  ];
 
-  const keys = [
+  const keysnotes = [
     { key: "C4,", col: 1, row: 0 },
     { key: "D4", col: 2, row: 0 },
-    { key: "E4", col: 2, row: 0 },
-    { key: "F4", col: 2, row: 0 },
-    { key: "G4", col: 2, row: 0 },
-    { key: "A4", col: 2, row: 0 },
-    { key: "B4", col: 2, row: 0 },
 
-    { key: "C5", col: 2, row: 0 },
-    { key: "D5", col: 2, row: 0 },
-    { key: "E5", col: 2, row: 0 },
-    { key: "F5", col: 2, row: 0 },
-    { key: "G5", col: 2, row: 0 },
-    { key: "A5", col: 2, row: 0 },
+    { key: "E4", col: 0, row: 1 },
+    { key: "F4", col: 2, row: 1 },
+    { key: "G4", col: 4, row: 1 },
+
+    { key: "A4", col: 0, row: 2 },
+    { key: "B4", col: 2, row: 2 },
+    { key: "C5", col: 3, row: 2 },
+
+    { key: "D5", col: 0, row: 3 },
+    { key: "E5", col: 2, row: 3 },
+    { key: "F5", col: 4, row: 3 },
+
+    { key: "G5", col: 2, row: 4 },
+    { key: "A5", col: 2, row: 5 },
   ];
 
+  // to save record notes
   const keymap = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
@@ -66,9 +55,21 @@ const Experience: React.FC<ExperienceProps> = (props) => {
 
   return (
     <div className={styles.experienceContainer}>
-      <div className={styles.experienceContainer__noteButtonContainer}>
-        {pianoNotes.map((note) => (
-          <NoteButton key={note} note={note} onClick={() => playNote(note)} />
+      <div
+        className={styles.experienceContainer__noteButtonContainer}
+        onClick={() => {}}
+      >
+        {keysnotes.map((note) => (
+          <NoteButton
+            key={note.key}
+            note={note.key}
+            onClick={() => playNote(note.key)}
+            style={{
+              gridColumn: note.col + 1,
+              gridRow: note.row + 1,
+              background: "seagreen",
+            }}
+          />
         ))}
       </div>
     </div>
