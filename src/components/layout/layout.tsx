@@ -1,3 +1,5 @@
+import styles from "./layout.module.scss";
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <nav>Tone.js Experience</nav>
+      <nav className={styles.title}>Tone.js Experience</nav>
       <main>{children}</main>
       {/* <footer>footer</footer> */}
     </>

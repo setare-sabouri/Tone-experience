@@ -24,7 +24,45 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   };
 
   // Notes for a simple piano
-  const pianoNotes = ["C4", "D4", "E4", "F4", "G4", "A4", "B4"];
+  const pianoNotes = [
+    "C4",
+    "D4",
+    "E4",
+    "F4",
+    "G4",
+    "A4",
+    "B4",
+    "C5",
+    "D5",
+    "E5",
+    "F5",
+    "G5",
+    "A5",
+  ];
+
+  const keys = [
+    { key: "C4,", col: 1, row: 0 },
+    { key: "D4", col: 2, row: 0 },
+    { key: "E4", col: 2, row: 0 },
+    { key: "F4", col: 2, row: 0 },
+    { key: "G4", col: 2, row: 0 },
+    { key: "A4", col: 2, row: 0 },
+    { key: "B4", col: 2, row: 0 },
+
+    { key: "C5", col: 2, row: 0 },
+    { key: "D5", col: 2, row: 0 },
+    { key: "E5", col: 2, row: 0 },
+    { key: "F5", col: 2, row: 0 },
+    { key: "G5", col: 2, row: 0 },
+    { key: "A5", col: 2, row: 0 },
+  ];
+
+  const keymap = [
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+  ];
 
   return (
     <div className={styles.experienceContainer}>
