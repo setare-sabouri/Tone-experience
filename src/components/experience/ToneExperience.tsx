@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import * as Tone from "tone";
 import styles from "./Experience.module.scss";
 import NoteButton from "@components/noteButton/NoteButton";
+import GridContainer from "@components/gridContainer/GridContainer";
 
 interface ExperienceProps {}
 
@@ -26,7 +27,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   // Notes for a simple piano
 
   const keysnotes = [
-    { key: "C4,", col: 1, row: 0 },
+    { key: "C4", col: 1, row: 0 },
     { key: "D4", col: 2, row: 0 },
 
     { key: "E4", col: 0, row: 1 },
@@ -59,7 +60,8 @@ const Experience: React.FC<ExperienceProps> = (props) => {
         className={styles.experienceContainer__noteButtonContainer}
         onClick={() => {}}
       >
-        {keysnotes.map((note) => (
+        <GridContainer notes={keysnotes} playNote={playNote} />
+        {/* {keysnotes.map((note) => (
           <NoteButton
             key={note.key}
             note={note.key}
@@ -70,7 +72,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
               background: "seagreen",
             }}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );
