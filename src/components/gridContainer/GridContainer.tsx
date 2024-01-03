@@ -1,7 +1,7 @@
 // GridContainer.tsx
-import React from "react";
-import NoteButton from "@components/noteButton/NoteButton";
-import styles from "./GridContainer.module.scss";
+import React from 'react';
+import NoteButton from '@components/noteButton/NoteButton';
+import styles from './GridContainer.module.scss';
 
 interface GridContainerProps {
   notes: { key: string; col: number; row: number }[];
