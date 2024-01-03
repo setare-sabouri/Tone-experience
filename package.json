@@ -10,10 +10,15 @@
   },
   "dependencies": {
     "audiokeys": "^0.1.1",
+    "i18n": "^0.15.1",
+    "i18next": "^23.7.14",
     "lit": "^3.0.2",
     "next": "^14.0.1",
+    "next-i18next": "^15.1.2",
     "react": "^18",
     "react-dom": "^18",
+    "react-i18next": "^14.0.0",
+    "react-intl": "^6.5.5",
     "sass": "^1.69.5",
     "tone": "^14.7.77"
   },
