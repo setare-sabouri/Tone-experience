@@ -1,4 +1,11 @@
 .wrapper {
   display: flex;
   align-items: center;
+
+  select {
+    border-radius: 4px;
+    padding: 0.4rem;
+    background-color: #b1f54a;
+    color: black;
+  }
 }

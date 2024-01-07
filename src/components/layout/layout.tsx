@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <>
       <nav className={styles.title}>
-        <p>{t('welcome')}</p>
+        <h1>{t('welcome')}</h1>
         <LanguageDropdown />
       </nav>
       <main>{children}</main>
