@@ -1,8 +1,12 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { useGLTF } from '@react-three/drei';
-import type { Group, Mesh, MeshBasicMaterial } from 'three';
+import React, { useEffect, useState } from "react";
+import { useGLTF } from "@react-three/drei";
+import type { Group, Mesh, MeshBasicMaterial } from "three";
 
-export const Cube = () => {
+interface CubeProps {
+  scale: number;
+}
+
+const Cube = ({ scale }: CubeProps) => {
   const [model, setModel] = useState<Group | null>(null);
   const [materials, setMaterials] = useState<Record<
     string,
@@ -19,7 +23,7 @@ export const Cube = () => {
   }, [model]);
 
   useEffect(() => {
-    setModel(useGLTF('/models/cube.glb'));
+    setModel(useGLTF("/models/cube.glb"));
   }, []);
 
   return (
@@ -34,10 +38,10 @@ export const Cube = () => {
                 castShadow
                 receiveShadow
                 geometry={nodes.Plane005_0.geometry}
-                material={materials['Material.006']}
+                material={materials["Material.006"]}
                 position={[-1.004, 0.014, -0.014]}
                 rotation={[0, Math.PI / 2, 0]}
-                scale={0.882}
+                scale={scale}
               />
             )}
 
@@ -49,10 +53,10 @@ export const Cube = () => {
                 castShadow
                 receiveShadow
                 geometry={nodes.Plane004_0.geometry}
-                material={materials['Material.005']}
+                material={materials["Material.005"]}
                 position={[1.006, 0.014, -0.014]}
                 rotation={[0, Math.PI / 2, 0]}
-                scale={0.882}
+                scale={scale}
               />
             )}
 
@@ -64,9 +68,9 @@ export const Cube = () => {
                 castShadow
                 receiveShadow
                 geometry={nodes.Plane003_0.geometry}
-                material={materials['Material.004']}
+                material={materials["Material.004"]}
                 position={[0, 0.014, -1.009]}
-                scale={0.882}
+                scale={scale}
               />
             )}
 
@@ -78,10 +82,10 @@ export const Cube = () => {
                 castShadow
                 receiveShadow
                 geometry={nodes.Plane002_0.geometry}
-                material={materials['Material.003']}
+                material={materials["Material.003"]}
                 position={[0, 1.002, 0.014]}
                 rotation={[-Math.PI / 2, 0, 0]}
-                scale={0.882}
+                scale={scale}
               />
             )}
 
@@ -93,10 +97,10 @@ export const Cube = () => {
                 castShadow
                 receiveShadow
                 geometry={nodes.Plane001_0.geometry}
-                material={materials['Material.002']}
+                material={materials["Material.002"]}
                 position={[0, -0.013, 1.003]}
                 rotation={[-Math.PI, 0, 0]}
-                scale={0.882}
+                scale={scale}
               />
             )}
 
@@ -114,10 +118,10 @@ export const Cube = () => {
               castShadow
               receiveShadow
               geometry={nodes.Plane_0.geometry}
-              material={materials['Material.001']}
+              material={materials["Material.001"]}
               position={[0, -1.001, 0]}
               rotation={[Math.PI / 2, 0, 0]}
-              scale={0.882}
+              scale={scale}
             />
           )}
         </group>
@@ -127,4 +131,4 @@ export const Cube = () => {
 };
 
 export default Cube;
-useGLTF.preload('/models/cube.glb');
+useGLTF.preload("/models/cube.glb");
