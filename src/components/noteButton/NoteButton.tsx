@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './NoteButton.module.scss';
+import React from "react";
+import styles from "./NoteButton.module.scss";
 interface NoteButtonProps {
   note: string;
   onClick: () => void;
