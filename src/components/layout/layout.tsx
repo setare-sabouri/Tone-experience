@@ -9,13 +9,13 @@ export default function RootLayout({
 }) {
   const { t } = useTranslation();
   return (
-    <>
+    <div>
       <nav className={styles.title}>
         <h1>{t('welcome')}</h1>
         <LanguageDropdown />
       </nav>
       <main>{children}</main>
       {/* rest of the page  */}
-    </>
+    </div>
   );
 }

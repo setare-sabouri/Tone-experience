@@ -1,11 +1,11 @@
-import React from "react";
-import styles from "./Canvas.module.scss";
-import Cube from "@components/cubeModel/Cube";
-import { Canvas } from "react-three-fiber";
-import { OrbitControls } from "@react-three/drei";
-import { useControls } from "leva";
+import React from 'react';
+import styles from './Canvas.module.scss';
+import Cube from '@components/cubeModel/Cube';
+import { Canvas } from 'react-three-fiber';
+import { OrbitControls } from '@react-three/drei';
+import { useControls } from 'leva';
 
-import { Suspense } from "react";
+import { Suspense } from 'react';
 const Gcanvas: React.FC = () => {
   const { scale } = useControls({
     scale: {
