@@ -24,10 +24,8 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
   }, [clickedNote]);
 
   useEffect(() => {
-    // Attach the event listener to the document
     document.addEventListener('keydown', keyDownHandler);
 
-    // Cleanup the event listener on component unmount
     return () => {
       document.removeEventListener('keydown', keyDownHandler);
     };
