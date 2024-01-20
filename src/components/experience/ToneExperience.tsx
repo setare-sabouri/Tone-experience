@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
-import * as Tone from "tone";
-import styles from "./Experience.module.scss";
-import GridContainer from "@components/gridContainer/GridContainer";
-import keysnotes from "@utils/notes";
+import React, { useEffect, useRef } from 'react';
+import * as Tone from 'tone';
+import styles from './Experience.module.scss';
+import GridContainer from '@components/gridContainer/GridContainer';
+import keysnotes from '@utils/notes';
 interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = (props) => {
@@ -20,7 +20,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
 
   const playNote = (note: string) => {
     if (synthRef.current) {
-      synthRef.current.triggerAttackRelease(note, "8n");
+      synthRef.current.triggerAttackRelease(note, '8n');
     }
   };
 
