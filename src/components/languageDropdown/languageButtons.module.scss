@@ -5,7 +5,8 @@
   select {
     border-radius: 4px;
     padding: 0.4rem;
-    background-color: #b1f54a;
+    background: $green-btn;
     color: black;
+    border: 1px solid $border-btn;
   }
 }

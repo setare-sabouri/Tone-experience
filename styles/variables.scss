@@ -1,0 +1,15 @@
+/* Colors */
+
+$green-btn: seagreen;
+$play-btn: rgb(215, 34, 18);
+$border-btn: rgb(207 207 63);
+$primary-color: #007bff;
+
+// Added to support mq mixin
+$mq-breakpoints: (
+  mobile-small: 380px,
+  mobile: 450px,
+  tablet: 768px,
+  desktop-small: 1024px,
+  desktop: 1440px,
+);
