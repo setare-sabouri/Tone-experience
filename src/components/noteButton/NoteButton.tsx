@@ -6,7 +6,11 @@ interface NoteButtonProps {
   style: React.CSSProperties;
 }
 
-const NoteButton: React.FC<NoteButtonProps> = ({ note, onClick, style }) => {
+const NoteButton: React.FC<NoteButtonProps> = ({
+  note = '',
+  onClick = () => {},
+  style = {},
+}) => {
   return (
     <button onClick={onClick} className={styles.noteButton} style={style}>
       {note}
