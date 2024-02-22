@@ -8,7 +8,12 @@ const KeyHelperLayout: React.FC<keyHelperLayoutProps> = (props) => {
   return (
     <div className={styles.KeyHelperLayout}>
       {keysnotes.map((elm) => (
-        <NoteButton key={elm.btn} />
+        <NoteButton
+          note={elm.btn}
+          key={elm.btn}
+          onClick={() => {}}
+          style={{}}
+        />
       ))}
     </div>
   );
