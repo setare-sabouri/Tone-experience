@@ -1,7 +1,15 @@
+.layoutwrapp {
+  height: 100vh;
+}
+
 .title {
   display: flex;
   font-size: 2rem;
   padding: 2rem 1rem;
+  height: 20vh;
   font-family: monospace;
   justify-content: space-around;
+}
+.content {
+  height: 80vh;
 }

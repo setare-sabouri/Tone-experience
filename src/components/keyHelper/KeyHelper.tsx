@@ -1,25 +1,28 @@
-import React, { useState, useRef } from 'react';
+// KeyHelper.tsx
+import React, { useState } from 'react';
 import styles from './KeyHelper.module.scss';
-import KeyHelperLayout from '@components/keyHelperLayout/keyHelperLayout';
+import GuideLayout from '@components/guideLayout/GuideLayout';
+import steps from '@utils/guideSteps';
+interface KeyHelperProps {
+  className?: string;
+}
 
-interface keyHelperProps {}
-
-const KeyHelper: React.FC<keyHelperProps> = (props) => {
-  const [showKeyboard, setShowKeyboard] = useState(false);
+const KeyHelper: React.FC<KeyHelperProps> = ({ className }) => {
+  const [showGuide, setShowGuide] = useState(false);
 
   const toggleKeyboard = () => {
-    setShowKeyboard((prevShowKeyboard) => !prevShowKeyboard);
+    setShowGuide((prevShowGuide) => !prevShowGuide);
   };
 
   return (
-    <>
+    <div className={`${styles.helper} ${className}`}>
       <div>
         <button className={styles.helperBtn} onClick={toggleKeyboard}>
-          Show Keys Map
+          Help
         </button>
       </div>
-      {showKeyboard && <KeyHelperLayout />}
-    </>
+      {showGuide && <GuideLayout steps={steps} />}
+    </div>
   );
 };
 

@@ -4,7 +4,6 @@ import styles from './Experience.module.scss';
 import GridContainer from '@components/gridContainer/GridContainer';
 import keysnotes from '@utils/notes';
 import KeyHelper from '@components/keyHelper/KeyHelper';
-import keyHelperLayout from '@components/keyHelperLayout/keyHelperLayout';
 interface ExperienceProps {}
 
 const Experience: React.FC<ExperienceProps> = (props) => {
@@ -29,9 +28,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   return (
     <div className={styles.experienceContainer}>
       <GridContainer notes={keysnotes} playNote={playNote} />
-      <div className={styles.helpersCnt}>
-        <KeyHelper />
-      </div>
+      <KeyHelper className={styles.helpersCnt}></KeyHelper>
     </div>
   );
 };

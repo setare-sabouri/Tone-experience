@@ -16,8 +16,8 @@ const keysnotes = [
     { key: "E5", col: 2, row: 3, btn: '9', digit: 'Digit9' },
     { key: "F5", col: 4, row: 3, btn: 'Q', digit: 'KeyQ' },
 
-    { key: "G5", col: 2, row: 4, btn: 'W', digit: 'KeyW' },
-    { key: "A5", col: 2, row: 5, btn: 'E', digit: 'KeyE' },
+    { key: "G5", col: 2, row: 4, btn: 'A', digit: 'KeyA' },
+    { key: "A5", col: 2, row: 5, btn: 'Z', digit: 'KeyZ' },
 ];
 
 // to save record notes
@@ -29,3 +29,13 @@ const keymap = [
 ];
 
 export default keysnotes
+
+// C4 C4 D4 C4 F4 E4
+// C4 C4 D4 C4 G4 F4
+// C4 C4 C5 A4 F4 E4 D4
+// B4 B4 A4 F4 G4 F4
+
+//001032
+//001043
+//0075321
+//665343

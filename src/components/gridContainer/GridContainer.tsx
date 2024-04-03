@@ -3,7 +3,13 @@ import NoteButton from '@components/noteButton/NoteButton';
 import styles from './GridContainer.module.scss';
 
 interface GridContainerProps {
-  notes: { key: string; col: number; row: number; digit: string }[];
+  notes: {
+    key: string;
+    col: number;
+    row: number;
+    btn: string;
+    digit: string;
+  }[];
   playNote: (note: string) => void;
 }
 
@@ -42,6 +48,7 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
       {notes.map((note) => (
         <NoteButton
           key={note.key}
+          btn={note.btn}
           note={note.key}
           style={{
             gridColumn: note.col + 1,
