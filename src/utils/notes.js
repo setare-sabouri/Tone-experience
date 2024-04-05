@@ -14,10 +14,10 @@ const keysnotes = [
 
     { key: "D5", col: 0, row: 3, btn: '8', digit: 'Digit8', numPad: 'Numpad8' },
     { key: "E5", col: 2, row: 3, btn: '9', digit: 'Digit9', numPad: 'Numpad9' },
-    { key: "F5", col: 4, row: 3, btn: 'Q', digit: 'KeyQ' },
+    { key: "F5", col: 4, row: 3, btn: 'Q', digit: 'KeyQ', numPad: '' },
 
-    { key: "G5", col: 2, row: 4, btn: 'A', digit: 'KeyA' },
-    { key: "A5", col: 2, row: 5, btn: 'Z', digit: 'KeyZ' },
+    { key: "G5", col: 2, row: 4, btn: 'A', digit: 'KeyA', numPad: '' },
+    { key: "A5", col: 2, row: 5, btn: 'Z', digit: 'KeyZ', numPad: '' },
 ];
 
 // to save record notes

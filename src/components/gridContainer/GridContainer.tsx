@@ -19,9 +19,8 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
   const [clickedNote, setClickedNote] = useState<any | null>(null);
   const [hoveredNote, setHoveredNote] = useState<string | null>(null);
 
-  const keyDownHandler = (event: React.KeyboardEvent<HTMLDivElement>) => {
+  const keyDownHandler = (event: KeyboardEvent) => {
     event.stopPropagation();
-    console.log(event.code);
     setClickedNote(
       notes.find(
         (note) => note.digit === event.code || note.numPad === event.code
@@ -43,14 +42,14 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
   }, [clickedNote]);
 
   useEffect(() => {
-    document.addEventListener('keydown', keyDownHandler);
+    window.addEventListener('keydown', keyDownHandler);
     return () => {
-      document.removeEventListener('keydown', keyDownHandler);
+      window.removeEventListener('keydown', keyDownHandler);
     };
   }, []);
 
   return (
-    <div className={styles.gridContainer} onKeyDown={keyDownHandler}>
+    <div className={styles.gridContainer} tabIndex={0}>
       {notes.map((note) => (
         <NoteButton
           key={note.key}
@@ -62,8 +61,6 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
             backgroundColor:
               note.key === hoveredNote ? 'lightblue' : 'seagreen',
           }}
-          hoveredColor="lightblue" // Specify the hover color
-          hoverScale={1.1} // Specify the hover scale
           onClick={() => playNote(note.key)}
         />
       ))}
