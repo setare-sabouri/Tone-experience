@@ -1,16 +1,11 @@
 .noteButton {
   font-size: 1.5rem;
   background: $play-btn;
-  padding: 2rem;
-  width: 100%;
-  height: 100%;
+  padding: 1.5rem;
+
   border: 1px solid $border-btn;
   border-radius: 5px;
   cursor: pointer;
-
-  // &:hover {
-  //   background-color: rgb(22, 93, 53);
-  // }
 }
 .helper {
   font-size: 1rem;

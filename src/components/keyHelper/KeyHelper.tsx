@@ -3,11 +3,9 @@ import React, { useState } from 'react';
 import styles from './KeyHelper.module.scss';
 import GuideLayout from '@components/guideLayout/GuideLayout';
 import steps from '@utils/guideSteps';
-interface KeyHelperProps {
-  className?: string;
-}
+interface KeyHelperProps {}
 
-const KeyHelper: React.FC<KeyHelperProps> = ({ className }) => {
+const KeyHelper: React.FC<KeyHelperProps> = ({}) => {
   const [showGuide, setShowGuide] = useState(false);
 
   const toggleKeyboard = () => {
@@ -15,7 +13,7 @@ const KeyHelper: React.FC<KeyHelperProps> = ({ className }) => {
   };
 
   return (
-    <div className={`${styles.helper} ${className}`}>
+    <div className={styles.helper}>
       <div>
         <button className={styles.helperBtn} onClick={toggleKeyboard}>
           Help

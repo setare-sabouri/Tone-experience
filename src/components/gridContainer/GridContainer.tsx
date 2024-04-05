@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import NoteButton from '@components/noteButton/NoteButton';
 import styles from './GridContainer.module.scss';
+import { not } from 'three/examples/jsm/nodes/Nodes.js';
 
 interface GridContainerProps {
   notes: {
@@ -9,6 +10,7 @@ interface GridContainerProps {
     row: number;
     btn: string;
     digit: string;
+    numPad: string;
   }[];
   playNote: (note: string) => void;
 }
@@ -19,8 +21,12 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
 
   const keyDownHandler = (event: React.KeyboardEvent<HTMLDivElement>) => {
     event.stopPropagation();
-
-    setClickedNote(notes.find((note) => note.digit === event.code));
+    console.log(event.code);
+    setClickedNote(
+      notes.find(
+        (note) => note.digit === event.code || note.numPad === event.code
+      )
+    );
   };
 
   useEffect(() => {
@@ -56,6 +62,8 @@ const GridContainer: React.FC<GridContainerProps> = ({ notes, playNote }) => {
             backgroundColor:
               note.key === hoveredNote ? 'lightblue' : 'seagreen',
           }}
+          hoveredColor="lightblue" // Specify the hover color
+          hoverScale={1.1} // Specify the hover scale
           onClick={() => playNote(note.key)}
         />
       ))}

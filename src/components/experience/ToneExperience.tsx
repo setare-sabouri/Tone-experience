@@ -28,7 +28,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   return (
     <div className={styles.experienceContainer}>
       <GridContainer notes={keysnotes} playNote={playNote} />
-      <KeyHelper className={styles.helpersCnt}></KeyHelper>
+      <KeyHelper></KeyHelper>
     </div>
   );
 };

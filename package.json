@@ -12,6 +12,7 @@
     "@react-three/drei": "^9.93.0",
     "@react-three/fiber": "^8.15.13",
     "audiokeys": "^0.1.1",
+    "gsap": "^3.12.5",
     "i18n": "^0.15.1",
     "i18next": "^23.7.14",
     "leva": "^0.9.35",
