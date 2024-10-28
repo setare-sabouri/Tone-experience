@@ -10,7 +10,9 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <h1>{t('welcome')}</h1>
         <LanguageDropdown />
       </nav>
-      <main className={styles.content}>{children}</main>
+      <main className={styles.content}>
+        {children}
+      </main>
     </div>
   );
 }

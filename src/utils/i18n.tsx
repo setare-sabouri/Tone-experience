@@ -8,6 +8,9 @@ const resources = {
   sv: {
     translation: require('../../public/locales/sv/translation.json'),
   },
+  ir: {
+    translation: require('../../public/locales/ir/translation.json'),
+  },
 };
 
 i18n.use(initReactI18next).init({

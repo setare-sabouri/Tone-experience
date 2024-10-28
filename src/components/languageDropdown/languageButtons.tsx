@@ -17,6 +17,8 @@ const LanguageDropdown: React.FC = () => {
       >
         <option value="en">English</option>
         <option value="sv">Swedish</option>
+        <option value="ir">فارسی</option>
+
       </select>
     </div>
   );
