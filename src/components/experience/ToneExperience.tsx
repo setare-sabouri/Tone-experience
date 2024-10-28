@@ -3,8 +3,7 @@ import * as Tone from 'tone';
 import styles from './Experience.module.scss';
 import GridContainer from '@components/gridContainer/GridContainer';
 import keysnotes from '@utils/notes';
-import KeyHelper from '@components/keyHelper/KeyHelper';
-interface ExperienceProps {}
+interface ExperienceProps { }
 
 const Experience: React.FC<ExperienceProps> = (props) => {
   const synthRef = useRef<Tone.Synth | null>(null);
@@ -28,7 +27,6 @@ const Experience: React.FC<ExperienceProps> = (props) => {
   return (
     <div className={styles.experienceContainer}>
       <GridContainer notes={keysnotes} playNote={playNote} />
-      <KeyHelper></KeyHelper>
     </div>
   );
 };
