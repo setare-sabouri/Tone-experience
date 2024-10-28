@@ -12,7 +12,7 @@ interface NoteButtonProps {
 const NoteButton: React.FC<NoteButtonProps> = ({
   note = '',
   btn = '',
-  onClick = () => {},
+  onClick = () => { },
   style = {},
 }) => {
   const buttonRef = useRef<HTMLButtonElement>(null);

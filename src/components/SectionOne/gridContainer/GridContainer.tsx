@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NoteButton from '@components/noteButton/NoteButton';
+import NoteButton from '@components/SectionOne/noteButton/NoteButton';
 import styles from './GridContainer.module.scss';
 import { not } from 'three/examples/jsm/nodes/Nodes.js';
 

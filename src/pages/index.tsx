@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
-import Experience from '@components/experience/ToneExperience';
+import Experience from '@components/SectionOne/experience/ToneExperience';
+import ThreeEx from '@components/SectionTwo/threeEx/ThreeEx';
 import RootLayout from '@components/layout/layout';
 
 const Home: NextPage = () => {
@@ -7,6 +8,7 @@ const Home: NextPage = () => {
     <>
       <RootLayout>
         <Experience />
+        <ThreeEx />
       </RootLayout>
     </>
   );

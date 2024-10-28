@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import * as Tone from 'tone';
 import styles from './Experience.module.scss';
-import GridContainer from '@components/gridContainer/GridContainer';
+import GridContainer from '@components/SectionOne/gridContainer/GridContainer';
 import keysnotes from '@utils/notes';
 interface ExperienceProps { }
 
