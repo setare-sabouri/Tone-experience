@@ -7,9 +7,10 @@ interface Step {
 
 interface GuideLayoutProps {
   steps: Step[];
+  onClose: () => void; // Add an onClose prop
 }
 
-const GuideLayout: React.FC<GuideLayoutProps> = ({ steps }) => {
+const GuideLayout: React.FC<GuideLayoutProps> = ({ steps, onClose }) => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const goToNextStep = () => {
@@ -26,6 +27,7 @@ const GuideLayout: React.FC<GuideLayoutProps> = ({ steps }) => {
 
   return (
     <div className={styles.guidewindow}>
+      <button onClick={onClose} className={styles.closeBtn}>Close</button> {/* Add close button */}
       <div className={styles.stepContent}>{steps[currentStep].content}</div>
       <div className={styles.buttonsDis}>
         <button

@@ -1,6 +1,7 @@
 .guidewindow {
   background: $play-btn;
   position: absolute;
+  z-index: 1;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -32,5 +33,13 @@
   color: white;
   padding: 5px;
   border-radius: 5px;
+  border: 1px solid rgb(207, 207, 63);
+}
+.closeBtn {
+  background-color: $green-btn;
+  width: 10%;
+  padding: 5px;
+  border-radius: 5px;
+  place-self: flex-end;
   border: 1px solid rgb(207, 207, 63);
 }
