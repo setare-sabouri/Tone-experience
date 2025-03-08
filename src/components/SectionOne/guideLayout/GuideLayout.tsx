@@ -27,7 +27,7 @@ const GuideLayout: React.FC<GuideLayoutProps> = ({ steps, onClose }) => {
 
   return (
     <div className={styles.guidewindow}>
-      <button onClick={onClose} className={styles.closeBtn}>Close</button> {/* Add close button */}
+      <button onClick={onClose} className={styles.closeBtn}>Close</button>
       <div className={styles.stepContent}>{steps[currentStep].content}</div>
       <div className={styles.buttonsDis}>
         <button

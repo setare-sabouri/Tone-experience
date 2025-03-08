@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
   return (
     <div className={styles.layoutwrapp}>
       <nav className={styles.title}>
-        <h1>{t('welcome')}</h1>
+        <h1 className={styles.welcomeText}>{t('welcome')}</h1>
         <KeyHelper />
         <LanguageDropdown />
       </nav>

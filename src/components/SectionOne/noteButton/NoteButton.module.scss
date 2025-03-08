@@ -11,3 +11,10 @@
   font-size: 1rem;
   color: #ffcb8994;
 }
+
+@media (max-width: 600px) {
+  .noteButton {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
