@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from './KeyHelper.module.scss';
-import GuideLayout from '@components/SectionOne/guideLayout/GuideLayout';
+import GuideLayout from '../GuideLayout/GuideLayout'
 import steps from '@utils/guideSteps';
 import { useTranslation } from 'react-i18next';
 
