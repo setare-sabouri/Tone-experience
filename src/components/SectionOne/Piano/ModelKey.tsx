@@ -2,7 +2,6 @@
 import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { RoundedBox, Text3D } from "@react-three/drei";
-import font from "/node_modules/three/examples/fonts/helvetiker_regular.typeface.json";
 
 import { Mesh } from "three";
 
@@ -49,7 +48,7 @@ const ModelKey: React.FC<ModelKeyProps> = ({
       </RoundedBox>
 
       <Text3D
-        font={font}
+        font="./fonts/optimer_bold.typeface.json"
         size={0.3}
         height={0.05}
         curveSegments={12}
