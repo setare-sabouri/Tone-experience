@@ -19,13 +19,12 @@ const NoteButton: React.FC<NoteButtonProps> = ({
 
   const handleHoverEnter = () => {
     gsap.to(buttonRef.current, {
-      scale: 1.1,
+      scale: 1.2,
       backgroundColor: 'rgb(4, 85, 39)',
       color: 'white',
       opacity: 1,
-      rotation: 360,
       ease: 'power2.inOut',
-      duration: 0.1,
+      duration: 0.5,
     });
   };
 
@@ -35,7 +34,6 @@ const NoteButton: React.FC<NoteButtonProps> = ({
       backgroundColor: 'seagreen',
       opacity: 0.9,
       color: 'black',
-      rotation: 0,
       ease: 'power2.inOut',
       duration: 0.5,
     });

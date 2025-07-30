@@ -1,14 +1,9 @@
 import type { NextPage } from 'next';
-import Experience from '@components/SectionOne/experience/ToneExperience';
-import RootLayout from '@components/layout/layout';
+import Experience from '@components/SectionOne/Experience/ToneExperience';
 
 const Home: NextPage = () => {
   return (
-    <>
-      <RootLayout>
         <Experience />
-      </RootLayout>
-    </>
   );
 };
 

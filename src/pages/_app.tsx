@@ -1,13 +1,17 @@
-import '@styles/globals.scss';
-import type { AppProps } from 'next/app';
-import { I18nextProvider } from 'react-i18next';
-import i18n from '../utils/i18n';
-import { StrictMode } from 'react';
+import "@styles/globals.scss";
+import type { AppProps } from "next/app";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../utils/i18n";
+import { StrictMode } from "react";
+import RootLayout from "@components/layout/layout";
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <StrictMode>
       <I18nextProvider i18n={i18n}>
-        <Component {...pageProps} />
+        <RootLayout>
+          <Component {...pageProps} />
+        </RootLayout>
       </I18nextProvider>
     </StrictMode>
   );

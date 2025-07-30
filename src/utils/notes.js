@@ -1,25 +1,20 @@
 // Notes for a simple piano
 
-const keysnotes = [
-    { key: "C4", col: 1, row: 0, btn: '0', digit: 'Digit0', numPad: 'Numpad0' },
-    { key: "D4", col: 2, row: 0, btn: '1', digit: 'Digit1', numPad: 'Numpad1' },
-
-    { key: "E4", col: 0, row: 1, btn: '2', digit: 'Digit2', numPad: 'Numpad2' },
-    { key: "F4", col: 2, row: 1, btn: '3', digit: 'Digit3', numPad: 'Numpad3' },
-    { key: "G4", col: 4, row: 1, btn: '4', digit: 'Digit4', numPad: 'Numpad4' },
-
-    { key: "A4", col: 0, row: 2, btn: '5', digit: 'Digit5', numPad: 'Numpad5' },
-    { key: "B4", col: 2, row: 2, btn: '6', digit: 'Digit6', numPad: 'Numpad6' },
-    { key: "C5", col: 3, row: 2, btn: '7', digit: 'Digit7', numPad: 'Numpad7' },
-
-    { key: "D5", col: 0, row: 3, btn: '8', digit: 'Digit8', numPad: 'Numpad8' },
-    { key: "E5", col: 2, row: 3, btn: '9', digit: 'Digit9', numPad: 'Numpad9' },
-    { key: "F5", col: 4, row: 3, btn: 'Q', digit: 'KeyQ', numPad: '' },
-
-    { key: "G5", col: 2, row: 4, btn: 'A', digit: 'KeyA', numPad: '' },
-    { key: "A5", col: 2, row: 5, btn: 'Z', digit: 'KeyZ', numPad: '' },
+const notes = [
+  { note: 'C4', key: 'A', isBlack: false },
+  { note: 'C#4', key: 'W', isBlack: true },
+  { note: 'D4', key: 'S', isBlack: false },
+  { note: 'D#4', key: 'E', isBlack: true },
+  { note: 'E4', key: 'D', isBlack: false },
+  { note: 'F4', key: 'F', isBlack: false },
+  { note: 'F#4', key: 'T', isBlack: true },
+  { note: 'G4', key: 'G', isBlack: false },
+  { note: 'G#4', key: 'Y', isBlack: true },
+  { note: 'A4', key: 'H', isBlack: false },
+  { note: 'A#4', key: 'U', isBlack: true },
+  { note: 'B4', key: 'J', isBlack: false },
+  { note: 'C5', key: 'K', isBlack: false },
 ];
-
 // to save record notes
 const keymap = [
     [0, 0, 0, 0],
@@ -28,7 +23,7 @@ const keymap = [
     [0, 0, 0, 0],
 ];
 
-export default keysnotes
+export default notes
 
 // C4 C4 D4 C4 F4 E4
 // C4 C4 D4 C4 G4 F4

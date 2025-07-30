@@ -1,32 +1,16 @@
-import React, { useEffect, useRef } from 'react';
-import * as Tone from 'tone';
-import styles from './Experience.module.scss';
-import GridContainer from '@components/SectionOne/gridContainer/GridContainer';
-import keysnotes from '@utils/notes';
-interface ExperienceProps { }
+import React from "react";
+import PianoKeyboard from "../Piano/PianoKeyboard";
+import styles from "./Experience.module.scss";
+import { Canvas } from "@react-three/fiber";
+import { Environment } from "@react-three/drei";
 
-const Experience: React.FC<ExperienceProps> = (props) => {
-  const synthRef = useRef<Tone.Synth | null>(null);
-
-  useEffect(() => {
-    synthRef.current = new Tone.Synth().toDestination();
-
-    return () => {
-      if (synthRef.current) {
-        synthRef.current.dispose();
-      }
-    };
-  }, []);
-
-  const playNote = (note: string) => {
-    if (synthRef.current) {
-      synthRef.current.triggerAttackRelease(note, '8n');
-    }
-  };
-
+const Experience = () => {
   return (
     <div className={styles.experienceContainer}>
-      <GridContainer notes={keysnotes} playNote={playNote} />
+      <Canvas camera={{ position: [0, 3, 10], fov: 50 }} shadows>
+        <Environment preset="city" />
+        <PianoKeyboard />
+      </Canvas>
     </div>
   );
 };
