@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Experience from '../components/SectionOne/Experience/ToneExperience'
+import Experience from './../components/SectionOne/Experience/Experience'
 
 const Home: NextPage = () => {
   return (
