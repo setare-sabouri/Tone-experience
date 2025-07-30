@@ -1,8 +1,7 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next'; // Updated import
+import { useTranslation } from 'react-i18next'; 
 import styles from './layout.module.scss';
 import LanguageDropdown from '../languageDropdown/languageButtons'
-// import KeyHelper from '@components/SectionOne/keyHelper/KeyHelper';
 export default function RootLayout({ children }: { children: React.ReactNode; }) {
   const { t } = useTranslation();
   return (
