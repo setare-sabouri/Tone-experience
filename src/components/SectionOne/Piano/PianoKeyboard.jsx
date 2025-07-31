@@ -4,9 +4,9 @@ import { Center, Float, PresentationControls } from "@react-three/drei";
 import ModelKey from "./ModelKey";
 import notes from '../../../utils/notes'
 
-const PianoKeyboard: React.FC = () => {
-  const synthRef = useRef<Tone.Synth | null>(null);
-  const [activeKey, setActiveKey] = useState<string | null>(null);
+const PianoKeyboard= () => {
+  const synthRef = useRef(null);
+  const [activeKey, setActiveKey] = useState(null);
 
   useEffect(() => {
     synthRef.current = new Tone.Synth().toDestination();
@@ -15,13 +15,13 @@ const PianoKeyboard: React.FC = () => {
     };
   }, []);
 
-  const playNote = (note: string) => {
+  const playNote = (note) => {
     synthRef.current?.triggerAttackRelease(note, "8n");
     setActiveKey(note);
     setTimeout(() => setActiveKey(null), 300);
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = (e) => {
     const keyPressed = e.key.toUpperCase();
     const match = notes.find((n) => n.key === keyPressed);
     if (match) playNote(match.note);

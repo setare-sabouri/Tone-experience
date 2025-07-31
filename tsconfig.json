@@ -21,7 +21,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/components/SectionOne/NoteButton/NoteButton.jsx", "src/components/SectionOne/Experience/Experience.jsx", "src/pages/_app.jsx", "src/pages/index.jsx"  ],
+, "src/components/SectionOne/NoteButton/NoteButton.jsx", "src/components/SectionOne/Experience/Experience.jsx", "src/pages/_app.jsx", "src/pages/index.jsx", "src/components/SectionOne/Piano/PianoKeyboard.jsx"  ],
   "exclude": [
     "node_modules"
   ]
