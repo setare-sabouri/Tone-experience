@@ -4,7 +4,7 @@ import styles from "./Experience.module.scss";
 import { Canvas } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 
-const Experience = () => {
+const Lool = () => {
   return (
     <div className={styles.experienceContainer}>
       <Canvas camera={{ position: [0, 3, 10], fov: 50 }} shadows>
@@ -15,4 +15,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Lool;

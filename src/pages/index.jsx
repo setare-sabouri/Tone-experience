@@ -1,7 +1,7 @@
-import Experience from "../components/SectionOne/Experience/Experience";
+import Lool from "../components/SectionOne/Experience/lool";
 
 const Home = () => {
-  return <Experience />;
+  return <Lool />;
 };
 
 export default Home;
