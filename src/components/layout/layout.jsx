@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next'; 
 import styles from './layout.module.scss';
 import LanguageDropdown from '../languageDropdown/languageButtons'
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({ children }) {
   const { t } = useTranslation();
   return (
     <div className={styles.layoutwrapp}>
