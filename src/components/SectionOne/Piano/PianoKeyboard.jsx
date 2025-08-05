@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 import * as Tone from "tone";
 import { Center, Float, PresentationControls } from "@react-three/drei";
 import ModelKey from "./ModelKey";
-import notes from "../../../utils/notes";
+import notes from '../../../utils/notes'
 
 const PianoKeyboard = () => {
   const synthRef = useRef(null);
