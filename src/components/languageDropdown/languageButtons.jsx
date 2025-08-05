@@ -2,10 +2,10 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './languageButtons.module.scss';
 
-const LanguageDropdown: React.FC = () => {
+const LanguageDropdown= () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (language: string) => {
+  const changeLanguage = (language) => {
     i18n.changeLanguage(language);
   };
 

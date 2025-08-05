@@ -8,28 +8,46 @@ const PianoKeyboard = () => {
   const synthRef = useRef(null);
   const [activeKey, setActiveKey] = useState(null);
 
+  // Initialize the synth when the component mounts
   useEffect(() => {
     synthRef.current = new Tone.Synth().toDestination();
+
     return () => {
-      synthRef.current?.dispose();
+      synthRef.current.dispose();
     };
   }, []);
 
+  // Function to play a note and highlight key
   const playNote = useCallback((note) => {
-    synthRef.current?.triggerAttackRelease(note, "8n");
+    if (!synthRef.current) return;
+
+    // Ensure AudioContext is resumed (for browsers like Chrome)
+    Tone.start();
+    synthRef.current.triggerAttackRelease(note, "8n");
     setActiveKey(note);
-    setTimeout(() => setActiveKey(null), 300);
+
+    setTimeout(() => {
+      setActiveKey(null);
+    }, 300);
   }, []);
 
-  const handleKeyDown = useCallback((e) => {
-    const keyPressed = e.key.toUpperCase();
-    const match = notes.find((n) => n.key === keyPressed);
-    if (match) playNote(match.note);
-  }, [playNote]);
+  // Handle keyboard input
+  const handleKeyDown = useCallback(
+    (e) => {
+      const keyPressed = e.key.toUpperCase();
+      const match = notes.find((n) => n.key === keyPressed);
+      if (match) {
+        playNote(match.note);
+      }
+    },
+    [playNote]
+  );
 
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [handleKeyDown]);
 
   return (
@@ -50,7 +68,7 @@ const PianoKeyboard = () => {
               keyLabel={n.key}
               isBlack={n.isBlack}
               active={activeKey === n.note}
-              onClick={playNote}
+              onClick={() => playNote(n.note)}
               position={[i * 0.9, -0.8, 4.9]}
             />
           ))}

@@ -4,16 +4,9 @@ import { useFrame } from "@react-three/fiber";
 import { RoundedBox, Text3D } from "@react-three/drei";
 import { Mesh } from "three";
 
-type ModelKeyProps = {
-  note: string;
-  keyLabel: string;
-  isBlack: boolean;
-  active: boolean;
-  onClick: (note: string) => void;
-  position: [number, number, number];
-};
 
-const ModelKey: React.FC<ModelKeyProps> = ({
+
+const ModelKey= ({
   note,
   keyLabel,
   isBlack,
@@ -21,7 +14,7 @@ const ModelKey: React.FC<ModelKeyProps> = ({
   onClick,
   position,
 }) => {
-  const meshRef = useRef<Mesh>(null);
+  const meshRef = useRef(null);
 
   useFrame(() => {
     if (meshRef.current) {
