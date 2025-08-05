@@ -6,7 +6,7 @@ function App() {
 
   return (
     <RootLayout>
-      <Experience></Experience>
+      <Experience/>
     </RootLayout>
   )
 }
