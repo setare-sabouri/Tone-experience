@@ -1,4 +1,5 @@
-import Experience from "../components/SectionOne/Experience/Experience";
+import Experience from "../components/SectionOne/Experience";
+
 const Home = () => {
   return (
     <>
@@ -8,4 +9,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;  
