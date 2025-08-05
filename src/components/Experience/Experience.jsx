@@ -1,5 +1,5 @@
 
-import PianoKeyboard from "../Piano/PianoKeyboard";
+import PianoKeyboard from "../Piano/PianoKeyboard"
 import styles from "./Experience.module.scss";
 import { Canvas } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
