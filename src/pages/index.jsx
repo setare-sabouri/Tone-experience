@@ -1,4 +1,4 @@
-import Experience from "../components/SectionOne/Experience/Experience";
+import Experience from "../components/SectionOne/Experience";
 const Home = () => {
   return (
     <>
