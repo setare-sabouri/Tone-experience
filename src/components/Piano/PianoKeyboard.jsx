@@ -8,10 +8,9 @@ const PianoKeyboard = () => {
   const synthRef = useRef(null);
   const [activeKey, setActiveKey] = useState(null);
 
-  // Initialize the synth when the component mounts
+
   useEffect(() => {
     synthRef.current = new Tone.Synth().toDestination();
-
     return () => {
       synthRef.current.dispose();
     };
@@ -69,7 +68,7 @@ const PianoKeyboard = () => {
               isBlack={n.isBlack}
               active={activeKey === n.note}
               onClick={() => playNote(n.note)}
-              position={[i * 0.9, -0.8, 4.9]}
+              position={[i * 0.9, 1.4, 4.9]}
             />
           ))}
         </Center>

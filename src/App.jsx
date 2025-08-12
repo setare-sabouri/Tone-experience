@@ -1,13 +1,14 @@
 import "./styles/globals.scss"
-import RootLayout from './components/layout/layout'
 import Experience from "./components/Experience/Experience"
+import Interface from "./components/Interface/Interface"
 
 function App() {
 
   return (
-    <RootLayout>
-      <Experience/>
-    </RootLayout>
+       <>
+        <Experience/>
+        <Interface/>
+       </>
   )
 }
 

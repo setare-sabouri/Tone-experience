@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { RoundedBox, Text3D } from "@react-three/drei";
-import { Mesh } from "three";
+
 
 
 

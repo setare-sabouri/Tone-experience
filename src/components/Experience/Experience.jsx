@@ -1,4 +1,3 @@
-
 import PianoKeyboard from "../Piano/PianoKeyboard"
 import styles from "./Experience.module.scss";
 import { Canvas } from "@react-three/fiber";
@@ -8,7 +7,8 @@ const Experience = () => {
   return (
     <div className={styles.experienceContainer}>
       <Canvas camera={{ position: [0, 3, 10], fov: 50 }} shadows>
-        <Environment preset="city" />
+        <color args={["#1e703b"]} attach={"background"}/>
+        <Environment preset="dawn" />
         <PianoKeyboard />
       </Canvas>
     </div>
