@@ -52,7 +52,7 @@ const PianoKeyboard = () => {
   return (
     <PresentationControls
       global
-      polar={[-0.5, 0.9]}
+      polar={[0.4, 0.9]}
       azimuth={[-1, 1]}
       snap
       speed={1.4}
@@ -68,7 +68,7 @@ const PianoKeyboard = () => {
               isBlack={n.isBlack}
               active={activeKey === n.note}
               onClick={() => playNote(n.note)}
-              position={[i * 0.9, 1.4, 4.9]}
+              position={[i * 0.9,0, -3]}
             />
           ))}
         </Center>
