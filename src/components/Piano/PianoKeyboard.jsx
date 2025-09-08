@@ -4,10 +4,12 @@ import { Center, Float, PresentationControls } from "@react-three/drei";
 import ModelKey from "./ModelKey";
 import notes from "../../utils/notes"
 import Title from "../Title/Title";
+import useBreakpoint from "../../utils/useBreakpoint";
 
 const PianoKeyboard = () => {
   const synthRef = useRef(null);
   const [activeKey, setActiveKey] = useState(null);
+  const breakpoint = useBreakpoint()
 
 
   useEffect(() => {
@@ -57,7 +59,9 @@ const PianoKeyboard = () => {
       azimuth={[-1, 1]}
       snap
       speed={1.4}
-      zoom={1.3}
+      zoom={breakpoint === "mobile" ||"tablet" ? 1 : 1.3}
+
+
     >
       <Float rotationIntensity={0.7}>
         <Title />
