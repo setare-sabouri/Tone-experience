@@ -9,16 +9,12 @@ function App() {
   const breakpoint = useBreakpoint()
   const orientation = useOrientation()
   const rotateIsNeeded = breakpoint==='mobile' && orientation==='portrait';
-  console.log(rotateIsNeeded)
 
   return (
        <>
-
         <RotateOverlay show={rotateIsNeeded} />
-
-
         <Experience/>
-        <Interface/>
+        {/* <Interface/> */}
        </>
   )
 }

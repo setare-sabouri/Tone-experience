@@ -3,6 +3,7 @@ import * as Tone from "tone";
 import { Center, Float, PresentationControls } from "@react-three/drei";
 import ModelKey from "./ModelKey";
 import notes from "../../utils/notes"
+import Title from "../Title/Title";
 
 const PianoKeyboard = () => {
   const synthRef = useRef(null);
@@ -52,13 +53,15 @@ const PianoKeyboard = () => {
   return (
     <PresentationControls
       global
-      polar={[0.4, 0.9]}
+      polar={[0.4, 0.3]}
       azimuth={[-1, 1]}
       snap
       speed={1.4}
-      zoom={2}
+      zoom={1.3}
     >
       <Float rotationIntensity={0.7}>
+        <Title />
+
         <Center>
           {notes.map((n, i) => (
             <ModelKey
@@ -68,11 +71,12 @@ const PianoKeyboard = () => {
               isBlack={n.isBlack}
               active={activeKey === n.note}
               onClick={() => playNote(n.note)}
-              position={[i * 0.9,0, -3]}
+              position={[i * 0.9, 0.3, -0]}
             />
           ))}
         </Center>
       </Float>
+
     </PresentationControls>
   );
 };
