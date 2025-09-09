@@ -7,7 +7,7 @@ import { Perf } from "r3f-perf";
 const Experience = () => {
   return (
     <div className={styles.experienceContainer}>
-      <Canvas  >
+      <Canvas className={styles.CanvasCls} >
         {/* <Perf/> */}
         <color args={["#1e703b"]} attach={"background"}/>
         <Environment preset="city" />
