@@ -60,13 +60,11 @@ const PianoKeyboard = () => {
       snap
       speed={1.4}
       zoom={breakpoint === "mobile" ||"tablet" ? 1 : 1.3}
-
-
     >
       <Float rotationIntensity={0.7}>
         <Title />
-
-        <Center>
+        
+        <Center position={[0, 0, -1]}>
           {notes.map((n, i) => (
             <ModelKey
               key={n.note}
@@ -75,7 +73,7 @@ const PianoKeyboard = () => {
               isBlack={n.isBlack}
               active={activeKey === n.note}
               onClick={() => playNote(n.note)}
-              position={[i * 0.9, 0.3, -0]}
+              position={[i * 0.9, 0.3, 0]}
             />
           ))}
         </Center>
