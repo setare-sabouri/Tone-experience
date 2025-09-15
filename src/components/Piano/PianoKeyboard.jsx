@@ -64,7 +64,7 @@ const PianoKeyboard = () => {
       <Float rotationIntensity={0.7}>
         <Title />
         
-        <Center position={[0, 0, -1]}>
+        <Center position={[0, -1, -1]}>
           {notes.map((n, i) => (
             <ModelKey
               key={n.note}
